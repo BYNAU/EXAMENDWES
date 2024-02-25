@@ -14,9 +14,9 @@ router.get("/login",(req,res) => {
 
 router.post("/login", async (req,res) => {
     
-    const usuarioEncontrado = await Userr.findOne({nombre: "arnau"})
     
-    if (usuarioEncontrado.nombre == req.body.nombre){
+    
+    if (req.body.nombre == "arnau"){
         const nombre = req.body.nombre
         res.render("welcome",{nombre})
     } else if (req.body.nombre == "admin"){
@@ -66,8 +66,6 @@ router.post("/modificado", async (req,res) => {
 
     await Producto.updateOne(doc, {nombre:usuario, foto:req.body.foto, descripcion:req.body.descripcion });
     res.redirect("/productos")
-    
-
 })
 
 

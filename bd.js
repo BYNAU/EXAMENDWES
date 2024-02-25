@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const uri = "mongodb://localhost:27017/examen"
+const uri = "mongodb+srv://byNAUHD:yRnl60p2p3C5TwAA@cluster0.bbxqvwn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 const basededatos = async () => {
     await mongoose.connect(uri)
